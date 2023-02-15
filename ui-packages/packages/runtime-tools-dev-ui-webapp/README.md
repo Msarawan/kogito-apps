@@ -1,29 +1,45 @@
-# Kogito Management Console Webapp
+# Kogito runtime-tools-dev-ui-webapp
 
-The Kogito Management Console is a user interface for viewing the state of all available Kogito services and managing process instances.
+The Kogito runtime-tools is a user interface for viewing the state of all available Kogito services.
 
-Kogito Management Console consists of the following tabs that allow you to interact with your process instances and data:
-- Process Instances
-- Jobs
-
-## Process instances
-
-The Process Instances tab displays the list of process instances and enables you to add filters to the list.
-
-## Jobs management
-
-The Jobs Management tab displays the list of existing jobs, which you can filter and perform related management actions such as viewing job details, rescheduling a job, or canceling a job.
-
-For more detailed explination about management console go through with the [Kogito Docmentation](https://docs.jboss.org/kogito/release/latest/html_single/#con-management-console_kogito-developing-process-services)
+Kogito rutime-tools consists of the following tabs that allow you to interact with your process instances and data:
+- [Processes](#process-instances)
+- [Jobs](#jobs-management)
+- [Tasks](#task-inbox)
+- [Forms](#forms)
+- [Monitoring](#monitoring)
+- [Dashboards](#dashboards)
+- [Audit Investigation](#audit-investigation)
 
 
-The management-console-webapp includes the following pacakges in it:
-- @kogito-apps/components-common
-- @kogito-apps/consoles-common
-- @kogito-apps/jobs-management
-- @kogito-apps/management-console-shared
-- @kogito-apps/process-list
-- @kogito-apps/process-details
+For more detailed explination about runtime-tools (management console and task-console) go through with the [Kogito Docmentation](https://docs.jboss.org/kogito/release/latest/html_single/#con-management-console_kogito-developing-process-services)
+
+
+The runtime-tools-dev-ui-webapp includes the following pacakges in it:
+
+ - @kogito-apps/components-common
+ - @kogito-apps/consoles-common
+ - @kogito-apps/form-details
+ - @kogito-apps/form-displayer
+ - @kogito-apps/forms-list
+ - @kogito-apps/jobs-management
+ - @kogito-apps/management-console-shared
+ - @kogito-apps/ouia-tools
+ - @kogito-apps/patternfly-base
+ - @kogito-apps/process-definition-list
+ - @kogito-apps/process-details
+ - @kogito-apps/process-form
+ - @kogito-apps/process-list
+ - @kogito-apps/task-details
+ - @kogito-apps/task-form
+ - @kogito-apps/runtime-gateway-api
+ - @kogito-apps/task-inbox
+ - @kogito-apps/trusty
+ - @kogito-apps/monitoring
+ - @kogito-apps/monitoring-webapp
+ - @kogito-apps/workflow-form
+ - @kogito-apps/custom-dashboard-list
+ - @kogito-apps/custom-dashboard-view
 
 ## Tech stack
  
@@ -77,9 +93,9 @@ You can run your application in dev mode that enables live coding using:
 yarn run dev
 ```
 
-## Working with management-console features
+## **Working with runtime-tools-dev-ui-webapp features** :
 
-### **Process instances**
+## Process instances
 
 ![Process Instances tab](./docs/process-instance-section.png "Proces Instance tab" {width=400px height=280px})
 
@@ -136,8 +152,7 @@ In addition to these , there is a **reload** button(a sync-icon), to reload the 
 
 ### **Process list**
 
-
-![ProcessListPage](./docs/processlist.png "ProcessListPage")
+<img src="./docs/processlist.png " width="700px" height="150px">
 
 The List shows details of the process instances. Initially it loads only the parent process instances. The following are the details shows in the list :
 
@@ -163,7 +178,7 @@ The list has a toggle button on the left end, which when toggled would load all 
 **Kebab button** - The kebab button is enabled or disabled based on the process instance status and the contents of the kebab button varies based on the process-management capability provided to the particular instance. It consists of Abort, Skip and Retry.
 
 
-### Process management
+### **Process management**
 
 There are currently three process management capabilities in the process instance list.
 
@@ -185,7 +200,7 @@ A node in _Error_ state can be Retriggered. Clicking on the Retry would open up 
 
 ### **Process instance Details**
 
-![ProcessDetails](./docs/ProcessDetails.png "ProcessDetails")
+<img src="./docs/ProcessDetails.png " width="900px" height="400px">
 
 The process details page consist of the following :
 
@@ -201,8 +216,7 @@ The process management buttons consist of the following
 
 **Details**
 
-![Details panel](./docs/details-panel.png "Details panel")
-
+<img src="./docs/details-panel.png" width="300px" height="320px">
 
  The details consist of the following :
 
@@ -218,53 +232,138 @@ The process management buttons consist of the following
 
 **Timeline**
 
-![Timeline panel](./docs/timeline-panel.png "Timeline")
-
-
 The timeline shows the timeline of all the nodes of a process.It shows the state of the node(Active or Completed or Error), the name of the node(User Icon on the side for user tasks ) and a kebab button. The nodes in error are shown(hovering over the error icon would sho the error message) can be skipped or retriggered by selection the required option from the kebab toggle.
+
+<img src="./docs/timeline-panel.png" width="300px" height="320px">
 
 **Process variables**
 
-![Process Variables panel](./docs/process-variable-panel.png "Process Variables")
-
-
 The process variables shows the domain data in JSON format.
+
+<img src="./docs/process-variable-panel.png" width="300px" height="320px">
 
 ### **Process Diagram**
 
-![Process Diagram panel](./docs/process-diagram-panel.png "Process Diagram")
-
-
 The process diagram panel contains the BPMN process diagram, which the users you to view the current progress of the process.
+
+<img src="./docs/process-diagram-panel.png" width="700px" height="280px">
 
 ### **Jobs Panel**
 
-![Jobs panel](./docs/jobs-panel.png "Jobs Panel")
-
+<img src="./docs/jobs-panel.png" width="300px" height="250px">
 
 The Jobs panel shows the list of jobs(timer) and we can execute operations on the jobs using this panel. The available operations are - _View details_, _Reschedule_ and _Cancel_.
 
 ### **Node Trigger Panel**
 
-![Node Trigger panel](./docs/node-trigger-panel.png "NodeTrigger Panel")
-
-
 The nodes of a process can be tirggered manually using this panel. It consist of a dropdown, which shows the list of triggerable nodes. Once the required node is selected, click on Trigger button to trigger the node.
 
+<img src="./docs/node-trigger-panel.png" width="300px" height="200px">
 
 ### **Milestones Panel**
 
-![Milestones panel](./docs/milestones-panel.png "Milestones panel")
-
-
 The milestones panel show the list of milestones present and their current states.
 
+<img src="./docs/milestones-panel.png" width="300px" height="100px">
 
-### **Jobs management**
-
-![Jobs Management page](./docs/jobs-management.png "Jobs management")
-
+## **Jobs Management**
 
 The Jobs Management tab displays the list of existing jobs, which you can filter and perform related management actions such as viewing job details, rescheduling a job, or canceling a job.
 
 You can also cancel the multiple jobs at the same time. To cancel multiple jobs, select the jobs to be canceled and click the **_Cancel Selected_** button.
+
+<img src="./docs/jobs-management.png" width="800px" height="350px">
+
+## **Task Inbox**
+
+The task console shows a list of user tasks which are available for a process. Each column contains detailed information about the user task which are - _Name_, _Process_, _Priority_, _Status_, _Started_ and _Last update_. The columns are sortable.
+
+<img src="./docs/kogito-task-console.png" height="200">
+
+The task console consist of filters, which can be used to narrow down the search on a user task. There are two filters available
+
+ - A filter based on the status(dropdown)
+ - A filter based on the task name(text search)
+
+ <img src="./docs/filters.png">
+
+The _Status_ filter can be dropped down to view the and select the states available
+
+<img src="./docs/states.png">
+
+A _refresh_ button is available to refresh the list of user tasks
+
+A _Reset_ to default button is available to reset the filters to its initial state.
+
+The user task list also supports pagination.
+
+Clicking on the name of the user task will navigate to another screen, which consist of the auto generated forms.
+
+The Task Console requires your Kogito services to use the **Kogito Data Index** Service. The Data Index Service enables the Task Console to access stored events related to tasks and domain data from your Kogito services. The Kogito Data Index Service requires _Infinispan_ or _MongoDB_ persistence and _Apache Kafka_ messaging for your Kogito service.
+
+## **Forms**
+
+Use this section to generate and _**customize the forms**_ directly in the browser.
+
+<img src="./docs/formpage.png" width="700" height="380">
+
+The Forms page in the Dev UI contains a list of generated forms in a project. To switch between the table view and gallery view, select the toggle on the top-right corner of the page. You can also filter the list of forms by entering the _**form name**_.
+
+<img src="./docs/Form source in code editor.png" width="700" height="380">
+
+- Initially, the form content and the related configuration are added to the code editor. You can make changes to the code in the editor and click the play icon from the toolbar to execute the code immediately on the browser.
+
+- The **Source** tab loads the source code of the form in HTML or Typescript format based on the selected form. When the configurations of a form are loaded on the **Connections** tab, a set of resources including CDN links, URLs pointing to JS or CSS files are added to the form.
+
+<img src="./docs/Form cofigurations in code editor.png" width="700" height="380"><br/><br/>
+<img src="./docs/Toolbar options in code editor.png" />
+
+The code editor contains toolbar options, which allow you to undo and redo changes. Clicking on the play button executes the code and changes are applied immediately, while the save option allows you to save the changes on the source or configuration of the **forms**.
+
+
+## **Monitoring**
+
+  
+
+## **Dashboards**
+
+  Use this section to generate and _**customize the dashboards**_ directly in the browser.
+
+  <img src="./docs/dashboard.png"  width="700" height="380" />
+
+  The Dashboards consists of filters tab, which can be used to narrow down the search on a dashboards.
+
+  A _refresh_ button is available to refresh the list of user tasks.
+
+  <p align="center">
+  <img alt="age-dashboard" src="./docs/age-dashboard.png" width="45%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img alt="products-dashboards" src="./docs/products-dashboard.png" width="45%">
+  </p>
+
+Clicking on the name of the dashboards will navigate to another screen, which consist of the auto generated dashboards as shown in the images above.
+
+## Audit Investigation
+
+A user interface for monitoring and investigating Decision Model and Notation (DMN) model executions in Kogito.
+
+<img src="./docs/Kogito Audit Investigation Console.png" width="700" height="380"><br/><br/>
+
+we can use the Audit Investigation Console to browse DMN model executions, verify execution status, retrieve execution details, such as decision outcomes, input data, and model preview, and obtain explanation information about how the processed decisions were made.
+
+The Audit Investigation Console requires your Kogito services to use the following Kogito components:
+
+- **Kogito Trusty Service** : Enables the Audit Investigation Console to access stored events related to decision tracing from your Kogito services. The Kogito Trusty Service requires Infinispan persistence and Apache Kafka messaging for your Kogito service. 
+
+- **Kogito Explainability Service** : Generates explainability data that is stored in the Kogito Trusty Service. The Audit Investigation Console accesses the explainbility information from tracing-event data for decisions in your Kogito services. The Kogito Explainbility Service requires Apache Kafka messaging for your Kogito service.
+
+- **Kogito Tracing decision add-on** : Enables the Kogito service to produce tracing events and publish the events to Apache Kafka. The add-on also exposes the REST endpoint /predict for the Kogito Explainbility Service.
+
+
+
+
+
+
+
+
+ 
