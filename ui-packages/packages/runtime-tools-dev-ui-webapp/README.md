@@ -198,7 +198,7 @@ There are currently three process management capabilities in the process instanc
 
 A node in _Error_ state can be Retriggered. Clicking on the Retry would open up a box displaying the success or failure status of the Retry operation.
 
-### **Process instance Details**
+**Process instance Details**
 
 <img src="./docs/ProcessDetails.png " width="900px" height="400px">
 
@@ -248,19 +248,19 @@ The process diagram panel contains the BPMN process diagram, which the users you
 
 <img src="./docs/process-diagram-panel.png" width="700px" height="280px">
 
-### **Jobs Panel**
+**Jobs Panel**
 
 <img src="./docs/jobs-panel.png" width="300px" height="250px">
 
 The Jobs panel shows the list of jobs(timer) and we can execute operations on the jobs using this panel. The available operations are - _View details_, _Reschedule_ and _Cancel_.
 
-### **Node Trigger Panel**
+**Node Trigger Panel**
 
 The nodes of a process can be tirggered manually using this panel. It consist of a dropdown, which shows the list of triggerable nodes. Once the required node is selected, click on Trigger button to trigger the node.
 
 <img src="./docs/node-trigger-panel.png" width="300px" height="200px">
 
-### **Milestones Panel**
+**Milestones Panel**
 
 The milestones panel show the list of milestones present and their current states.
 
