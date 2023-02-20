@@ -90,9 +90,12 @@ yarn run build:prod
 You can run your application in dev mode that enables live coding using:
 
 ```bash
-yarn run dev
+ yarn run dev
 ```
-
+To run the test case use :
+``` 
+ yarn run test -u 
+```
 ## **Working with runtime-tools-dev-ui-webapp features** :
 
 ## Process instances
@@ -242,7 +245,7 @@ The process variables shows the domain data in JSON format.
 
 <img src="./docs/process-variable-panel.png" width="300px" height="320px">
 
-### **Process Diagram**
+**Process Diagram**
 
 The process diagram panel contains the BPMN process diagram, which the users you to view the current progress of the process.
 
