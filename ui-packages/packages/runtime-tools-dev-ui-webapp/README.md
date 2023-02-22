@@ -326,11 +326,10 @@ The code editor contains toolbar options, which allow you to undo and redo chang
 
 ## **Monitoring**
 
-  
-
+This section contains a workflow service.The workflow expects a JSON input containing a collections of numbers.
 ## **Dashboards**
 
-  Use this section to generate and _**customize the dashboards**_ directly in the browser.
+  This section we used to generate and _**customize the dashboards**_ directly in the browser.
 
   <img src="./docs/dashboard.png"  width="700" height="380" />
 
