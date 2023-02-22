@@ -3,16 +3,9 @@
 The Kogito Management Console is a user interface for viewing the state of all available Kogito services and managing process instances.
 
 Kogito Management Console consists of the following tabs that allow you to interact with your process instances and data:
-- Process Instances
-- Jobs
+- [Process Instances](#process-instances)
+- [Jobs](#jobs-management)
 
-## Process instances
-
-The Process Instances tab displays the list of process instances and enables you to add filters to the list.
-
-## Jobs management
-
-The Jobs Management tab displays the list of existing jobs, which you can filter and perform related management actions such as viewing job details, rescheduling a job, or canceling a job.
 
 For more detailed explination about management console go through with the [Kogito Docmentation](https://docs.jboss.org/kogito/release/latest/html_single/#con-management-console_kogito-developing-process-services)
 
@@ -81,8 +74,9 @@ yarn run dev
 
 ### **Process instances**
 
-![Process Instances tab](./docs/process-instance-section.png "Proces Instance tab" {width=400px height=280px})
+The Process Instances tab displays the list of process instances and enables you to add filters to the list.
 
+![Process Instances tab](./docs/process-instance-section.png "Proces Instance tab" {width=400px height=280px})
 
 The process instances page shows the list of process instances available. The list is an expandable list , which shows all the child process instance of the particular process instance when expanded. Each row in the list contains the information about the process instances. The info includes details like name, status, endpoint etc... The list also provides many ways to [filter](#filters) out the process instances and also to perform [process-management](#process-management) operations to the processes. The details of them are mentioned below.
 
@@ -135,7 +129,6 @@ In addition to these , there is a **reload** button(a sync-icon), to reload the 
 
 
 ### **Process list**
-
 
 ![ProcessListPage](./docs/processlist.png "ProcessListPage")
 
@@ -263,7 +256,6 @@ The milestones panel show the list of milestones present and their current state
 ### **Jobs management**
 
 ![Jobs Management page](./docs/jobs-management.png "Jobs management")
-
 
 The Jobs Management tab displays the list of existing jobs, which you can filter and perform related management actions such as viewing job details, rescheduling a job, or canceling a job.
 
