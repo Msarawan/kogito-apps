@@ -13,7 +13,7 @@ The Api's used are :
  - getFormsQuery()
  - openForm()
 
- ### Install dependencies
+### Install dependencies
 
 To install dependencies you need to have yarn installed globally and run in the terminal:
 ```
