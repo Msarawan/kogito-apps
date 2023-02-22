@@ -19,6 +19,7 @@ The runtime-tools-dev-ui-webapp includes the following pacakges in it:
 
  - @kogito-apps/components-common
  - @kogito-apps/consoles-common
+ - @kogito-apps/cloud-event-form
  - @kogito-apps/form-details
  - @kogito-apps/form-displayer
  - @kogito-apps/forms-list
